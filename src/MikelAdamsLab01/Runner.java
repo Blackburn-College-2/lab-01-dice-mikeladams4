@@ -18,11 +18,15 @@ public class Runner {
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        System.out.println("How may dice?");
+        int dice = input.nextInt();
+        System.out.println("How many sides?");
+        int sides = input.nextInt();
         System.out.println("How often should I print?");
         int rolls = input.nextInt();
         while (true) {
             Roller roller = new Roller();
-            roller.rollAll(rolls);
+            roller.rollAll(rolls,dice,sides);
         }
     }
 

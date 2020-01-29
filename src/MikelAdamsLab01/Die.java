@@ -11,15 +11,11 @@ package MikelAdamsLab01;
  */
 public class Die {
 
-    private int sides;
+    public int sides;
     Counter counter = new Counter();
 
-    public Die() {
-        sides = 6;
-    }
-
     public int roll() {
-        int result = 1 + (int) (Math.random() * ((6 - 1) + 1));
+        int result = 1 + (int) (Math.random() * ((sides - 1) + 1));
         return result;
     }
 

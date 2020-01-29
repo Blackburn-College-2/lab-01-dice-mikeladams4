@@ -11,13 +11,13 @@ package MikelAdamsLab01;
  */
 public class Counter {
 
-    private int[] List = new int[6];
+    public int[] List;
     
     public void Count(int x) {
         List[x - 1] = List[x - 1] + 1;
     }
 
-    public void Print(int rolls) {
+    public void Print(int rolls, int dice) {
         System.out.println("After " + rolls + " the distribution is,");
         for (int i = 0; i < List.length; i++) {
             System.out.println(i + 1 + " was rolled " + List[i] + " (+" + ((List[i]*100)/rolls) + "%)");
