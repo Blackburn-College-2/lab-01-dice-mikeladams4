@@ -10,5 +10,21 @@ package MikelAdamsLab01;
  * @author mikel.adams
  */
 public class Roller {
-    
+
+    Die die = new Die();
+    Counter counter = new Counter();
+
+    public void rollAll(int rolls) {
+        int x = 0;
+        while (true) {
+            int i = 0;
+            while (i < rolls) {
+                x = x + 1;
+                i = i + 1;
+                int result = die.roll();
+                counter.Count(result);
+            }
+            counter.Print(x);
+        }
+    }
 }

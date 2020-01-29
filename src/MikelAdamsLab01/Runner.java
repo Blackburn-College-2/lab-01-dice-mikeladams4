@@ -5,6 +5,8 @@
  */
 package MikelAdamsLab01;
 
+import java.util.Scanner;
+
 /**
  *
  * @author paul.kline
@@ -15,7 +17,13 @@ public class Runner {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        System.out.println("How often should I print?");
+        int rolls = input.nextInt();
+        while (true) {
+            Roller roller = new Roller();
+            roller.rollAll(rolls);
+        }
     }
-    
+
 }
